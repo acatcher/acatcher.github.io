@@ -11,7 +11,10 @@ tags:                               #标签
 ---
 
 ## Hey
->这是我的第一篇博客。
+>This is my first blog
 
-hello world :D 
+hello world :D
+
 I will use this blog to share :)
+
+### enjoy life
