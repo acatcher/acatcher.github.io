@@ -1,6 +1,6 @@
 ---
 layout:     post                    # 使用的布局（不需要改）
-title:      MarkDown               # 标题 
+title:      Learn MarkDown               # 标题 
 subtitle:   Hello World, Hello Blog #副标题
 date:       2019-03-02              # 时间
 author:     ASeeker                      # 作者
@@ -11,7 +11,7 @@ tags:                               #标签
 ---
 
 
-#markdown
+#markdown  
 ## list
 * 1234
 * 234
@@ -30,8 +30,8 @@ and this is [**bing**][]
 [link1]:www.baidu.com
 [**bing**]:https://cn.bing.com
 
-##image
-`this is code`
+##image  
+`this is code`  
 ![img1](https://ws2.sinaimg.cn/large/006tKfTcly1g0o9dtzjqrj30jg0i5773.jpg)
 
 *1*
