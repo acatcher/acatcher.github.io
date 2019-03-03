@@ -11,7 +11,8 @@ tags:                               #标签
 ---
 
 
-#markdown  
+#markdown 
+ 
 ## list
 * 1234
 * 234
@@ -30,7 +31,8 @@ and this is [**bing**][]
 [link1]:www.baidu.com
 [**bing**]:https://cn.bing.com
 
-##image  
+##image
+  
 `this is code`  
 ![img1](https://ws2.sinaimg.cn/large/006tKfTcly1g0o9dtzjqrj30jg0i5773.jpg)
 
