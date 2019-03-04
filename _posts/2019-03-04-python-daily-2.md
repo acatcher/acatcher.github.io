@@ -19,6 +19,7 @@ tags:
 >The source is [**FROM HERE**][ref1].   
 THX For the Authors' contribution!  
 Just a green hand just for study, I will delete it if I infringed your rights.
+
 [ref1]:https://github.com/rougier/numpy-100
 
 #### 1. Import the numpy package under the name `np` (★☆☆)
@@ -196,8 +197,9 @@ print(np.unravel_index(99,(6,7,8)))
 >np.tile  
 >e.g.
 >
->```python
->>>> a = np.array([0, 1, 2])
+
+```python
+>>> a = np.array([0, 1, 2])
 >>> np.tile(a, 2)
 array([0, 1, 2, 0, 1, 2])
 >>> np.tile(a, (2, 2))
@@ -223,7 +225,9 @@ array([[1, 2, 3, 4],
        [1, 2, 3, 4],
        [1, 2, 3, 4],
        [1, 2, 3, 4]])
->```
+
+```
+
 
 
 ```python
@@ -310,8 +314,12 @@ print(np.array([np.nan]).astype(int).astype(float))
 >***np.copysign***  
 >Change the sign of x1 to that of x2, element-wise.
 >
->```python
->#Examples
+>
+>***np.ceil***  
+>***np.random.uniform***
+
+```python
+#Examples
 #--------
 >>> np.copysign(1.3, -1)
 -1.3
@@ -324,10 +332,7 @@ inf
 array([-1., -0., -1.])
 >>> np.copysign([-1, 0, 1], np.arange(3)-1)
 array([-1.,  0.,  1.])
->```
->
->***np.ceil***  
->***np.random.uniform***
+```
 
 
 ```python
