@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Python daliy 2
+title:      Python daily 2
 subtitle:   numpy #副标题
 date:       2019-03-04
 author:     ASeeker

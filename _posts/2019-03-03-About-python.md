@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Python daliy 1
+title:      Python daily 1
 subtitle:   Accumulation #副标题
 date:       2019-03-03
 author:     ASeeker
@@ -8,7 +8,6 @@ header-img: img/post-bg-ios9-web.jpg
 catalog: true
 tags:
     - python
-    - daily
 ---
 
 # python

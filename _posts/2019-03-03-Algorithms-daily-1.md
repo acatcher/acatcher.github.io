@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Algorithms daliy 1
+title:      Algorithms daily 1
 subtitle:   Leetcode 70 91 621 #副标题
 date:       2019-03-03
 author:     ASeeker
