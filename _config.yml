@@ -1,17 +1,17 @@
 # Site settings
-title: Aseeker's blog
-SEOTitle: Y.Z.X
+title: Aseeker
+SEOTitle: Yzx's blog
 header-img: img/post-bg-desk.jpg
 email: 2782735324@qq.com
-description: "Every failure is leading towards success."
-keyword: "aseeker, cs, nlp, machine learning"
+description: "Similing!"
+keyword: "aseeker, cs"
 url: "http://acatcher.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/acatcher/acatcher.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
+sidebar-about-description: "Enjoy Life!"
 sidebar-avatar: /img/pic.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
