@@ -26,7 +26,7 @@ The word can be constructed from letters of sequentially adjacent cell, where "a
 ***My Sol***  
 图的深度优先搜索思路 即矩阵中向四周扩散寻找  
 第一个loop暴力找到和string[0]相等的位置  
-这道题还是挺简单的，和[博客的解题方法几乎一致][ref4] 
+这道题还是挺简单的，和[博客的解题方法][ref4]几乎一致  
 不过博客还是有两个小trick值得学习  
 递归调用结束后 可以直接将flag矩阵恢复为false 这样就不用像我这样重新init了  
 还有一种更省空间的办法 直接将相应位置改为'#'号   
