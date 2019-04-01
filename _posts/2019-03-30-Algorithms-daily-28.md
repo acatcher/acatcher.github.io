@@ -1,4 +1,3 @@
-
 ---
 layout:     post
 title:      Algorithms daily 28
