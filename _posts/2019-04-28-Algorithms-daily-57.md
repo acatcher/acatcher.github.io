@@ -17,7 +17,7 @@ tags:
 ## 致敬波波维奇！致敬马刺！
 
 今天做下数组和字符串这张小卡片，复习复习基础芝士，里面有很多的easy题    
-> 参考博客[^1] [^2] [^3] [^4] [^5] [^6]
+> 参考博客[^1] [^2] [^3] [^4] [^5] [^6] [^7]
 
 [^1]: 724, http://www.cnblogs.com/grandyang/p/7865693.html
 [^2]: 498, http://www.cnblogs.com/grandyang/p/6414461.html
@@ -25,6 +25,7 @@ tags:
 [^4]: 14, http://www.cnblogs.com/grandyang/p/4606926.html
 [^5]: 167, http://www.cnblogs.com/grandyang/p/5185815.html
 [^6]: 151, http://www.cnblogs.com/grandyang/p/4606676.html
+[^7]: 189, http://www.cnblogs.com/grandyang/p/4298711.html
 
 ## 724. Find Pivot Index
 >Given an array of integers nums, write a method that returns the "pivot" index of this array.  
@@ -651,6 +652,76 @@ public:
 };
 ```
 
+## 189. Rotate Array
+>Given an array, rotate the array to the right by k steps, where k is non-negative.   
+>See [***leetcode 209***][ref14] for details.   
+
+[ref14]:https://leetcode-cn.com/problems/rotate-array/
+
+***Sol***   
+加k模n  设置一个起始点，如果回到了起始点，就可以继续下一个了～  
+注意特殊情况，k%n为0时就不要转了  
+
+
+***Code***
+
+```cpp
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        int n = nums.size();
+        if(k%n == 0){
+            return;
+        }
+        
+        int startPos = 0, index = 0, pre = nums[0];
+
+        for(int i = 0; i < n; ++i){
+        	index = (index + k)%n;
+
+        	int temp = nums[index];
+        	nums[index] = pre;
+        	pre = temp;
+
+        	if(index == startPos){
+        		index = ++startPos;
+        		pre = nums[index];
+        	}
+        }
+    }
+};
+```
+
+这题还有一个巧妙的方法，先两部分reverse，再整个reverse  
+下次写记得要用内置的`reverse(nums.begin(), nums.end());`
+
+```cpp
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        int n = nums.size();
+        if(n == 0 || k%n == 0){
+        	return;
+        }
+        k %= n;
+        rotateHelper(nums, 0, n-1-k);
+        rotateHelper(nums, n-k, n-1);
+        rotateHelper(nums, 0, n-1);
+    }
+
+    void rotateHelper(vector<int> &nums, int start, int end){
+    	while(start < end){
+    		swap(nums[start], nums[end]);
+    		start++;
+    		end--;
+    	}
+
+    }
+
+};
+```
+
+
 ## 119. Pascal's Triangle II
 >Given a non-negative index k where k ≤ 33, return the kth index row of the Pascal's triangle.  
 Note that the row index starts from 0.  
@@ -759,5 +830,104 @@ public:
     }
 };
 ```
+
+### 元气满满的一天又开始啦～ 赶紧偷偷的把这张小卡片收入囊中
+**:)**
+
+## 557. Reverse Words in a String III
+>Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.  
+>See [***leetcode 557***][ref17] for details.   
+
+[ref17]:https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/
+
+***My Sol***   
+。。。。
+
+***Code***
+
+```cpp
+class Solution {
+public:
+    string reverseWords(string s) {
+        
+        int i = 0, n = s.size();
+        
+        while(i < n){
+        	int j = i+1;
+        	while(j < n && s[j] != ' '){
+        		j++;
+        	}
+        	reverse(s.begin()+i, s.begin()+j);
+        	i = j+1;
+        }
+        return s;
+    }
+};
+```
+
+## 26. Remove Duplicates from Sorted Array
+>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.  
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.  
+>See [***leetcode 26***][ref18] for details.   
+
+[ref18]:https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
+
+***My Sol***   
+。。。。
+
+***Code***
+
+
+```cpp
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        
+        int index = 1;
+
+        for(int i = 1; i < nums.size(); ++i){
+        	if(nums[i] == nums[i-1]){
+        		continue;
+        	}
+        	nums[index++] = nums[i]
+        }
+
+        return nums.empty()? 0 : index;
+
+    }
+};
+```
+
+
+## 283. Move Zeroes
+>Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.  
+>See [***leetcode 283***][ref19] for details.   
+
+[ref19]:https://leetcode-cn.com/problems/move-zeroes/
+
+***My Sol***   
+。。。。
+
+***Code***
+
+```cpp
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int index = 0;
+
+        for(auto& num : nums){
+        	if(num){
+        		nums[index++] = num;
+        	}
+        }
+
+        for(int i = index; i < nums.size(); ++i){
+        	nums[i] = 0;
+        }
+    }
+};
+```
+
 
  ----
