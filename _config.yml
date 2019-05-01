@@ -73,12 +73,12 @@ comments: true
 
 comments:
   gitalk: true
-  gitalk_clientID: 4ba8ded231d9875d939e
-  gitalk_Secret: e9aacb77788029196ed28d547369400a549199ff
-  gitalk_repo: acatcher.github
-  gitalk_owner: acatcher
-  gitalk_admin: acatcher
-  distractionFreeMode: false
+  gitalk_clientID: '4ba8ded231d9875d939e'
+  gitalk_Secret: 'e9aacb77788029196ed28d547369400a549199ff'
+  gitalk_repo: 'acatcher.github'
+  gitalk_owner: 'acatcher'
+  gitalk_admin: 'acatcher'
+  distractionFreeMode: true
 
 
 
