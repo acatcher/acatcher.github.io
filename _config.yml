@@ -67,7 +67,7 @@ gitalk:
  repo: acatcher.club    #仓库名称
  owner: acatcher    #github用户名
  admin: acatcher
-distractionFreeMode: true #是否启用类似FB的阴影遮罩
+ distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
 # 统计
