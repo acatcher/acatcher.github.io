@@ -60,25 +60,25 @@ kramdown:
 # disqus_username: qiubaiying
 
 # Gitalk
-# gitalk:
-#  enable: true    #是否开启Gitalk评论
-#  clientID: 4ba8ded231d9875d939e                            #生成的clientID
-#  clientSecret: e9aacb77788029196ed28d547369400a549199ff    #生成的clientSecret
-#  repo: acatcher.club    #仓库名称
-#  owner: acatcher    #github用户名
-#  admin: acatcher
-#  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+gitalk:
+ enable: true    #是否开启Gitalk评论
+ clientID: 4ba8ded231d9875d939e                            #生成的clientID
+ clientSecret: e9aacb77788029196ed28d547369400a549199ff    #生成的clientSecret
+ repo: acatcher.github.io    #仓库名称
+ owner: acatcher    #github用户名
+ admin: acatcher
+ distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
-comments: true
+# comments: true
 
-comments:
-  gitalk: true
-  gitalk_clientID: '4ba8ded231d9875d939e'
-  gitalk_Secret: 'e9aacb77788029196ed28d547369400a549199ff'
-  gitalk_repo: 'acatcher.github.io'
-  gitalk_owner: 'acatcher'
-  gitalk_admin: 'acatcher'
-  distractionFreeMode: true
+# comments:
+#   gitalk: true
+#   gitalk_clientID: '4ba8ded231d9875d939e'
+#   gitalk_Secret: 'e9aacb77788029196ed28d547369400a549199ff'
+#   gitalk_repo: 'acatcher.github.io'
+#   gitalk_owner: 'acatcher'
+#   gitalk_admin: 'acatcher'
+#   distractionFreeMode: true
 
 
 
