@@ -64,7 +64,7 @@ gitalk:
  enable: true    #是否开启Gitalk评论
  clientID: 4ba8ded231d9875d939e                            #生成的clientID
  clientSecret: e9aacb77788029196ed28d547369400a549199ff    #生成的clientSecret
- repo: acatcher.github.io    #仓库名称
+ repo: acatcher.club    #仓库名称
  owner: acatcher    #github用户名
  admin: acatcher
  distractionFreeMode: true #是否启用类似FB的阴影遮罩
