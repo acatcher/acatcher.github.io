@@ -18,14 +18,153 @@ tags:
 
 > 参考博客[^1] [^2] [^3] [^4] [^5] [^6] [^7] [^8]
 
-[^3]: 使用哈希集查重, https://leetcode-cn.com/explore/learn/card/hash-table/204/practical-application-hash-set/804/
-[^4]: 349, http://www.cnblogs.com/grandyang/p/5507129.html
-[^5]: 202, http://www.cnblogs.com/grandyang/p/4447233.html
-[^6]: 49, http://www.cnblogs.com/grandyang/p/4385822.html
-[^7]: 652, http://www.cnblogs.com/grandyang/p/7500082.html
-[^8]: 454, http://www.cnblogs.com/grandyang/p/6073317.html
+[^1]: 705, https://www.cnblogs.com/grandyang/p/9966807.html
+[^2]: 使用哈希集查重, https://leetcode-cn.com/explore/learn/card/hash-table/204/practical-application-hash-set/804/
+[^3]: 349, http://www.cnblogs.com/grandyang/p/5507129.html
+[^4]: 202, http://www.cnblogs.com/grandyang/p/4447233.html
+[^5]: 49, http://www.cnblogs.com/grandyang/p/4385822.html
+[^6]: 652, http://www.cnblogs.com/grandyang/p/7500082.html
+[^7]: 454, http://www.cnblogs.com/grandyang/p/6073317.html
+[^8]: 380, http://www.cnblogs.com/grandyang/p/5740864.html
 
-## 使用哈希集查重
+
+## 705. Design HashSet
+>Design a HashSet without using any built-in hash table libraries.  
+See [***leetcode 705***][ref1] for details.   
+
+[ref1]:https://leetcode-cn.com/problems/design-hashset/
+
+***My Sol***   
+题目给了一个范围`[0, 1000000]`，直接就开了个这么大的数组
+ 
+***Code***
+
+```cpp
+class MyHashSet {
+public:
+    /** Initialize your data structure here. */
+    MyHashSet() {
+        v.resize(1000001, 0);
+    }
+    
+    void add(int key) {
+        v[key] = 1;
+    }
+    
+    void remove(int key) {
+        v[key] = 0;
+    }
+    
+    /** Returns true if this set contains the specified element */
+    bool contains(int key) {
+        return v[key] == 1;
+    }
+
+private:
+    vector<int> v;
+
+};
+```
+
+也可以先开个`1000*1000`二维数组的第一维，然后`/1000`有之后再开第二维1000  
+
+```cpp
+class MyHashSet {
+public:
+    /** Initialize your data structure here. */
+    MyHashSet() {
+        mod = 1000;
+        v.resize(mod, vector<int>());
+    }
+    
+    void add(int key) {
+
+        int index = key/mod;
+        if(v[index].empty())
+        {
+            v[index].resize(mod,0);
+        }
+        v[index][key%mod] = 1;
+    }
+    
+    void remove(int key) {
+        int index = key/mod;
+        if(!v[index].empty())
+        {
+            v[index][key%mod] = 0;
+        }
+    }
+    
+    /** Returns true if this set contains the specified element */
+    bool contains(int key) {
+        int index = key/mod;
+        return !v[index].empty() && v[index][key%mod];
+    }
+
+private:
+    vector<vector<int>> v;
+    int mod;
+};
+```
+
+## 706. Design HashMap
+>Design a HashMap without using any built-in hash table libraries.  
+>See [***leetcode 706***][ref2] for details.   
+
+[ref2]:https://leetcode-cn.com/problems/design-hashmap/
+
+***My Sol***   
+其实和上面一题 一mu一样  
+ 
+***Code***
+
+```cpp
+class MyHashMap {
+public:
+    /** Initialize your data structure here. */
+    MyHashMap() {
+        mod = 1000;
+        v.resize(1000,vector<int>());
+    }
+    
+    /** value will always be non-negative. */
+    void put(int key, int value) {
+        int hashKey = key%1000;
+        if(v[hashKey].empty())
+        {
+            v[hashKey].resize(mod,-1);
+        }
+        v[hashKey][key/1000] = value;
+    }
+    
+    /** Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key */
+    int get(int key) {
+        int hashKey = key%1000;
+        if(v[hashKey].empty())
+        {
+            return -1;
+        }
+        return v[hashKey][key/1000];
+    }
+    
+    /** Removes the mapping of the specified value key if this map contains a mapping for the key */
+    void remove(int key) {
+        int hashKey = key%1000;
+        if(!v[hashKey].empty())
+        {
+            v[hashKey][key/1000] = -1;
+        }
+    }
+
+private:
+    vector<vector<int>> v;
+    int mod;
+};
+```
+
+
+
+# i 使用哈希集查重
 
 ```cpp
 /*
@@ -182,7 +321,7 @@ public:
 };
 ```
 
-# 哈希映射  -小结 i
+# ii 哈希映射 提供更多信息
 提供更多信息
 
 ```cpp
@@ -324,7 +463,7 @@ public:
 };
 ```
 
-# 哈希映射  -小结 ii
+# iii 哈希映射 按键聚合
 按键聚合
 
 ```cpp
@@ -380,7 +519,7 @@ public:
 };
 ```
 
-# 设计键
+# iv 设计键
 
 ## 49. Group Anagrams
 >Given an array of strings, group anagrams together.  
@@ -729,7 +868,69 @@ public:
 };
 ```
 
-默默的留下三个设计题明天写咯。。。
+默默的留下三个设计题明天写咯。。。  
+
+day2的故事 51假期🏖继续美美的睡了个懒觉😴 起床填坑ing··· 
+
+## 380. Insert Delete GetRandom O(1)
+>Design a data structure that supports all following operations in average O(1) time.  
+>See [***leetcode 380***][ref15] for details.   
+
+[ref15]:https://leetcode-cn.com/problems/insert-delete-getrandom-o1/
+
+***Sol***   
+咋都默认hash O(1)呢。。  
+关键问题就是随机返回值了，所以另外配一个数组    
+ 
+***Code***
+
+```cpp
+class RandomizedSet {
+public:
+    /** Initialize your data structure here. */
+    RandomizedSet() {
+        
+    }
+    
+    /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
+    bool insert(int val) {
+        if(m.count(val))
+        {
+            return false;
+        }
+        m[val] = size++;
+        nums.push_back(val);
+        return true;
+
+    }
+    
+    /** Removes a value from the set. Returns true if the set contained the specified element. */
+    bool remove(int val) {
+        if(m.count(val) <= 0)
+        {
+            return false;
+        }
+        m[nums[size-1]] = m[val];
+        nums[m[val]] = nums[size-1];
+        nums.pop_back();
+        size--;
+        m.erase(val);
+        return true;
+
+    }
+    
+    /** Get a random element from the set. */
+    int getRandom() {
+        return nums[rand()%size];
+    }
+
+private:
+    vector<int> nums;
+    unordered_map<int,int> m;
+    int size = 0;
+
+};
+```
 
 
 ----
