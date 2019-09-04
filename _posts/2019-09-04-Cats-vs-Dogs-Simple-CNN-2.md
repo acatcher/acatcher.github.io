@@ -2,7 +2,7 @@
 layout:     post
 title:      Deep Learning with Python 02
 subtitle:   cats vs dogs simple cnn 2 #副标题
-date:       2019-09-01
+date:       2019-09-04
 author:     ASeeker
 header-img: img/flipped1.jpeg
 catalog: true
