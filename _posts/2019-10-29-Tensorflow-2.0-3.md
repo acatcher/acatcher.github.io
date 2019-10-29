@@ -319,27 +319,27 @@ for step, (batch_x, batch_y) in enumerate(train_data.take(train_steps+1)):
         print("step %d loss: %f  acc: %f" %(step, loss, acc(y_pred, batch_y)))
 ```
 
-step 0 loss: 2.336060  acc: 0.062500
-step 100 loss: 0.187474  acc: 0.906250
-step 200 loss: 0.226720  acc: 0.968750
-step 300 loss: 0.088488  acc: 1.000000
-step 400 loss: 0.062447  acc: 0.968750
-step 500 loss: 0.162202  acc: 0.937500
-step 600 loss: 0.115830  acc: 0.968750
-step 700 loss: 0.043087  acc: 1.000000
-step 800 loss: 0.238977  acc: 0.937500
-step 900 loss: 0.008179  acc: 1.000000
-step 1000 loss: 0.007713  acc: 1.000000
-step 1100 loss: 0.085170  acc: 0.968750
-step 1200 loss: 0.065700  acc: 0.968750
-step 1300 loss: 0.056616  acc: 0.968750
-step 1400 loss: 0.018644  acc: 1.000000
-step 1500 loss: 0.029943  acc: 0.968750
-step 1600 loss: 0.103587  acc: 0.968750
-step 1700 loss: 0.005319  acc: 1.000000
-step 1800 loss: 0.004890  acc: 1.000000
-step 1900 loss: 0.000941  acc: 1.000000
-step 2000 loss: 0.057181  acc: 0.968750
+step 0 loss: 2.336060  acc: 0.062500  
+step 100 loss: 0.187474  acc: 0.906250  
+step 200 loss: 0.226720  acc: 0.968750  
+step 300 loss: 0.088488  acc: 1.000000  
+step 400 loss: 0.062447  acc: 0.968750  
+step 500 loss: 0.162202  acc: 0.937500  
+step 600 loss: 0.115830  acc: 0.968750  
+step 700 loss: 0.043087  acc: 1.000000  
+step 800 loss: 0.238977  acc: 0.937500  
+step 900 loss: 0.008179  acc: 1.000000  
+step 1000 loss: 0.007713  acc: 1.000000  
+step 1100 loss: 0.085170  acc: 0.968750  
+step 1200 loss: 0.065700  acc: 0.968750  
+step 1300 loss: 0.056616  acc: 0.968750  
+step 1400 loss: 0.018644  acc: 1.000000  
+step 1500 loss: 0.029943  acc: 0.968750  
+step 1600 loss: 0.103587  acc: 0.968750  
+step 1700 loss: 0.005319  acc: 1.000000  
+step 1800 loss: 0.004890  acc: 1.000000  
+step 1900 loss: 0.000941  acc: 1.000000  
+step 2000 loss: 0.057181  acc: 0.968750  
 
 可见这个网络还是很棒很棒的～ 不过笔者很是怀疑是不是自己的coding出了问题，居然有那么多100%以及相同的acc，比如0.968750。后来看了一下，自己的batch设置的很小，0.968750的acc正好就是31个判断正确，1个error，就不是什么问题了，只是因为大部分都会正确预测。笔者又试了一下，牺牲下自己的电脑，把batch开到了128，acc相同的情况好了一点。   
 
