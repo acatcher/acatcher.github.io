@@ -19,7 +19,7 @@ tags:
 RNN系列  
 顺带复习一下RNN  
 
-> Reference[^1] [^2] [^3] [^4] [^5] [^6] [^7] [^8] [^9]
+> Reference[^1] [^2] [^3] [^4] [^5] [^6] [^7] [^8] [^9] [^10]
 
 #### RNN --> LSTM
 
@@ -411,3 +411,5 @@ print('test acc %f' %(acc(y_test_pred, y_test)))
 [^8]: https://blog.csdn.net/xwd18280820053/article/details/72867818
 
 [^9]: https://docs.scipy.org/doc/numpy/reference/generated/numpy.pad.html
+
+[^10]: https://github.com/aymericdamien/TensorFlow-Examples/tree/master/tensorflow_v2/notebooks/3_NeuralNetworks
