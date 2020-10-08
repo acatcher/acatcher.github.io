@@ -1,7 +1,7 @@
 # Site settings
 title: Aseeker
 SEOTitle: Yzx's blog
-header-img: img/post-bg-desk.jpg
+header-img: img/bgindex1.jpeg
 email: you.zx@foxmail.com
 description: "Similing!"
 keyword: "aseeker, cs"
@@ -23,7 +23,7 @@ RSS: false
 github_username:    acatcher
 #facebook_username:  baiying.qiu.7
 #jianshu_username:   e71990ada2fd
-twitter_username:   Aseekering
+# twitter_username:   Aseekering
 
 
 
