@@ -111,12 +111,6 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "google",
-        href: "https://www.google.com"
-    },{
-        title: "bing",
-        href: "https://cn.bing.com"
-    },{
       title: "好朋友小明",
       href: "https://doctordo.cn"
     },
